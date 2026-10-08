@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NOVA - Build Something Amazing</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080f20;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+    height: 64px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    background: rgba(5, 12, 28, 0.92);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #19bdf5;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #c8ced9;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #20bfff;
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px 40px;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(0, 170, 220, 0.42),
+            transparent 34%
+        ),
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(100, 45, 220, 0.40),
+            transparent 36%
+        ),
+        #080f20;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 82px);
+    line-height: 1.05;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: #19bdf5;
+}
+
+.hero p {
+    color: #b7c0ce;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 auto 30px;
+    max-width: 650px;
+}
+
+/* BUTTONS */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 14px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary {
+    background: #19bdf5;
+    color: #06101d;
+}
+
+.primary:hover {
+    background: #5bd5ff;
+    transform: translateY(-2px);
+}
+
+.secondary {
+    color: white;
+    border: 1px solid #34415b;
+    background: rgba(255,255,255,0.02);
+}
+
+.secondary:hover {
+    border-color: #19bdf5;
+    transform: translateY(-2px);
+}
+
+/* SECTIONS */
+section:not(.hero) {
+    padding: 90px 8%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+section p {
+    color: #aeb7c5;
+    line-height: 1.7;
+}
+
+/* FEATURES */
+.features {
+    background: #0b1326;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 1000px;
+    margin: 45px auto 0;
+}
+
+.card {
+    padding: 30px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #19bdf5;
+}
+
+.card h3 {
+    color: #19bdf5;
+    margin-bottom: 12px;
+}
+
+/* ABOUT */
+.about {
+    background: #080f20;
+}
+
+/* CONTACT */
+.contact {
+    background: #0b1326;
+}
+
+.contact-button {
+    display: inline-block;
+    margin-top: 25px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #050a15;
+    color: #788397;
+    font-size: 13px;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+
+    nav {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    section h2 {
+        font-size: 30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">NOVA</div>
+
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>
+            Build Something<br>
+            <span>Amazing.</span>
+        </h1>
+
+        <p>
+            A modern, responsive website built using only HTML, CSS and
+            JavaScript — all inside one file.
+        </p>
+
+        <div class="buttons">
+            <a href="#features" class="btn primary">
+                Explore Website
+            </a>
+
+            <a href="#contact" class="btn secondary">
+                Contact Us
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURES -->
+<section class="features" id="features">
+
+    <h2>Features</h2>
+
+    <p>
+        Everything you need to build something amazing.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Modern Design</h3>
+            <p>
+                Clean and beautiful interface with a modern dark theme.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Responsive</h3>
+            <p>
+                Works smoothly on mobile phones, tablets and computers.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Fast</h3>
+            <p>
+                Lightweight website built using simple HTML and CSS.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+    <h2>About NOVA</h2>
+
+    <p>
+        NOVA is a modern website concept created to show how simple
+        HTML and CSS can create a professional-looking experience.
+    </p>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>
+        Have an idea? Let's build something amazing together.
+    </p>
+
+    <a href="mailto:hello@example.com"
+       class="btn primary contact-button">
+        Contact Us
+    </a>
+
+</section>
+
+
+<footer>
+    © 2026 NOVA. All rights reserved.
+</footer>
+
+</body>
+</html>
